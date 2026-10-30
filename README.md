@@ -214,3 +214,4 @@ The project includes an automated test script [test_api.py](test_api.py) using t
 
 ## 8. Link to Demonstration Video
 * **Video Link:** 
+[![Xem Video](https://img.youtube.com/vi/IjvS-7vagyU/maxresdefault.jpg)](https://youtu.be/IjvS-7vagyU)
