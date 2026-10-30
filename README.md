@@ -86,7 +86,23 @@ python main.py
 
 ## 6. Instructions for Calling the API & Examples
 
-### 6.1. Endpoint `GET /` (System Overview)
+The API can be interacted with using either the **Interactive Swagger UI (Browser)** or **Command Line (cURL)**.
+
+---
+
+### 6.1. Interactive Testing via Swagger UI (Recommended for Browser)
+1. Ensure the API server is running (`uvicorn main:app --reload`).
+2. Open your web browser and navigate to: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs).
+3. Click on the desired endpoint:
+   * **`GET /`**: Click **Try it out** → **Execute** to inspect system metadata.
+   * **`GET /health`**: Click **Try it out** → **Execute** to verify the model and server readiness.
+   * **`POST /predict`**: Click **Try it out**, edit the input JSON payload in the request body, and click **Execute** to receive sentiment classification results.
+
+---
+
+### 6.2. Testing via Command Line (cURL)
+
+#### A. Endpoint `GET /` (System Overview)
 * **cURL:**
   ```bash
   curl -X GET "http://127.0.0.1:8000/"
@@ -108,7 +124,7 @@ python main.py
 
 ---
 
-### 6.2. Endpoint `GET /health` (Health Check)
+#### B. Endpoint `GET /health` (Health Check)
 * **cURL:**
   ```bash
   curl -X GET "http://127.0.0.1:8000/health"
@@ -125,7 +141,7 @@ python main.py
 
 ---
 
-### 6.3. Endpoint `POST /predict` (Inference)
+#### C. Endpoint `POST /predict` (Inference)
 
 #### Case 1: Positive Sentiment Input
 * **cURL:**
